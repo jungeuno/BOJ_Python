@@ -1,7 +1,5 @@
 N = int(input())
-score = [int(input()) for i in range(N)]
+score = list(map(int, input().split()))
 M = max(score)
-set_score = []
-for i in score:
-  set_score.append(i/M*100)
+set_score = [i/M*100 for i in score]
 print(sum(set_score)/N)
