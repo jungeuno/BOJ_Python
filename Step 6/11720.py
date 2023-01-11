@@ -1,7 +1,7 @@
 n = int(input())
-l = [int(input()) for i in range(n)]
-
+l = str(input())
 result = 0
-while l/10 >= 0:
-  result += l%10
-  
+
+for i in range(n):
+  result += int(l[i:i+1])
+print(result)
