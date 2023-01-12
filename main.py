@@ -1,8 +1,13 @@
-total = []
-while True:
-  a,b = map(int, input().split())
-  if a==0 and b==0:
-    break
-  total.append(a+b)
-for i in range(len(total)):
-  print(total[i])
+n = int(input())
+l = []
+l_new = []
+for i in range(n):
+  num = int(input())
+  if num >= int(l[i]):
+    l[i+1].append(num)
+  else:
+    temp = int(l[i])
+    l[i].append(num)
+    l[i+1].append(temp)
+for i in l:
+  print(i)
