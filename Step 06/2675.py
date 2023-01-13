@@ -1,13 +1,9 @@
-R = input()
-s = []
-S_new = []
+R = int(input())
+l = []
 
 for i in range(R):
-  cnt, S1 = input().split()
-  cnt = int(cnt)
-  s.append(S1)
-  for i in range(len(S1)):
-    S_new.append(s[i]*cnt)
-
-for i in range(len(S_new)):
-  print(i)
+  n, codes = input().split()
+  n = int(n)
+  for code in codes:
+    print(code*n, end='')
+  print()
