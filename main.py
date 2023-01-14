@@ -1,11 +1,10 @@
-d = input()
+n = int(input())
+word = [input() for i in range(n)]
 
-dials = ['1','ABC','DEF','GHI','JKL','MNO','PQRS','TUV','WXYZ','0']
-cnt = 0
+set_word = set(word)
+word = list(set_word)
+word.sort()
+word.sort(key = len)
 
-for i in range(len(d)):
-  for dial in dials:
-    if d[i] in dial:
-      cnt += dials.index(dial)+1
-
-print(cnt+len(d))
+for i in word:
+  print(i)
