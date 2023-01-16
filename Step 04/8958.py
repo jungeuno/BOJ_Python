@@ -1,15 +1,16 @@
 n = int(input())
-result = []
-r = 0
-for i in range(n):
-  answer = input()
-  if answer[i] == 'X':
-    r += 0
-  elif answer[i] == answer[i+1]:
-    r += i+1
-  else:
-    r += 1
-  result[i].append(r)
+result = 0
+cnt = 0
 
-for i in result:
-  print(i)
+for i in range(1, n+1):
+  answer = list(map(str, input().split()))
+  if answer[i] == 'O':
+    cnt += 1
+    result += cnt
+    if answer[i] == answer[i-1]:
+      cnt += 1
+  else:
+    cnt = 0
+  result += cnt
+  
+print(result)
